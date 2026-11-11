@@ -94,6 +94,11 @@
 
 # Then replace the return secret_code line with a line that appends secret_code to the secret_codes list.
 
+# Step 19
+# Finally, return secret_codes, then uncomment the function call and update the argument to be [poem, poem2, poem3]. Now your function works with multiple poems at once, and can extract multiple PINs!
+
+# The pin_extractor function is completed.
+
 def pin_extractor(poems):
     secret_codes = []
     for poem in poems:
@@ -106,7 +111,9 @@ def pin_extractor(poems):
             else:
                 secret_code += "0"
         secret_codes.append(secret_code)
+    return secret_codes
 poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
 poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow'
 poem3 = 'There\nonce\nwas\na\ndragon'
-# print(pin_extractor(poem))
+print(pin_extractor([poem, poem3, poem3]))
+# ['5202', '50000', '50000']
