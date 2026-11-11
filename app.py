@@ -62,13 +62,16 @@
 
 # Update the print call to print the length as a string.
 
+# Step 11
+# Now you can concatenate str(len(words[line_index])) to secret_code. Remove the print call and use the += operator to append str(len(words[line_index])) to secret_code.
+
 def pin_extractor(poem):
     secret_code = ""
     lines = poem.split("\n")
     for line_index, line in enumerate(lines):
         print(line_index,line)
         words = line.split()
-        print(str(len(words[line_index])))
+        secret_code += str(len(words[line_index]))
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
 # print(pin_extractor(poem))
