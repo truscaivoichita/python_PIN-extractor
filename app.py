@@ -115,5 +115,5 @@ def pin_extractor(poems):
 poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
 poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow'
 poem3 = 'There\nonce\nwas\na\ndragon'
-print(pin_extractor([poem, poem3, poem3]))
-# ['5202', '50000', '50000']
+print(pin_extractor([poem, poem2, poem3]))
+# ['5202', '3346', '50000']
