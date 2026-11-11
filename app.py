@@ -26,10 +26,20 @@
 # Step 5
 # You need to work on each line independently: create a loop over lines that uses line as the loop variable. Inside the loop, print line.
 
+# Step 6
+# The nth digit of the PIN is hidden as the length of the nth word in the nth line.
+
+# To find the length of the nth word, the next step is to separate the line of the poem into a list of words: inside the loop, create a variable words and assign to it the value of line split into words using the split method.
+
+# Then, add a print call with words as its argument.
+
 def pin_extractor(poem):
     secret_code = ""
     lines = poem.split("/n")
     for line in lines:
         print(lines)
+        words = line.split()
+        print(words)
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
+print(pin_extractor(poem))
