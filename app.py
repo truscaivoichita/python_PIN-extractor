@@ -71,12 +71,18 @@
 # Step 13
 # Pass pin_extractor(poem) to the print function so you can see what the function is returning.
 
+# Step 14
+# The function extracts the code from the poem, but there is an edge case to consider: a line could be shorter than expected, which would cause an error. You can try this by removing the word bright from the poem.
+
+# Put the line secret_code += str(len(words[line_index])) in an if statement that checks that there are enough words in the words list.
+
 def pin_extractor(poem):
     secret_code = ""
     lines = poem.split("\n")
     for line_index, line in enumerate(lines):
         words = line.split()
-        secret_code += str(len(words[line_index]))
+        if len(words) > line_index:
+            secret_code += str(len(words[line_index]))
     return secret_code
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 print(pin_extractor(poem))
