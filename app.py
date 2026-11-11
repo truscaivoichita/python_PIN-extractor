@@ -76,13 +76,20 @@
 
 # Put the line secret_code += str(len(words[line_index])) in an if statement that checks that there are enough words in the words list.
 
+# Step 15
+# The third line of the poem is missing a third word, so the PIN is shorter than expected.
+
+# Add an else clause that concatenates a '0' to secret_code when there are not enough words, so that all lines of the poem are used to find digits.
+
 def pin_extractor(poem):
-    secret_code = ""
-    lines = poem.split("\n")
+    secret_code = ''
+    lines = poem.split('\n')
     for line_index, line in enumerate(lines):
         words = line.split()
         if len(words) > line_index:
             secret_code += str(len(words[line_index]))
+        else:
+            secret_code += "0"
     return secret_code
-poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
+poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
 print(pin_extractor(poem))
