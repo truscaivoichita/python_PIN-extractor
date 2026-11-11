@@ -81,6 +81,11 @@
 
 # Add an else clause that concatenates a '0' to secret_code when there are not enough words, so that all lines of the poem are used to find digits.
 
+# Step 16
+# Now the PIN extractor works, but it could be more efficient! It could extract the PIN from many poems at the same time!
+
+# Add two more poems in the global scope, poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow' and poem3 = 'There\nonce\nwas\na\ndragon', and for now, comment out the print with the call to pin_extractor.
+
 def pin_extractor(poem):
     secret_code = ''
     lines = poem.split('\n')
@@ -92,4 +97,6 @@ def pin_extractor(poem):
             secret_code += "0"
     return secret_code
 poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
-print(pin_extractor(poem))
+poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow'
+poem3 = 'There\nonce\nwas\na\ndragon'
+# print(pin_extractor(poem))
