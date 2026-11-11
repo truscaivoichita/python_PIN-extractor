@@ -86,16 +86,20 @@
 
 # Add two more poems in the global scope, poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow' and poem3 = 'There\nonce\nwas\na\ndragon', and for now, comment out the print with the call to pin_extractor.
 
-def pin_extractor(poem):
-    secret_code = ''
-    lines = poem.split('\n')
-    for line_index, line in enumerate(lines):
-        words = line.split()
-        if len(words) > line_index:
-            secret_code += str(len(words[line_index]))
-        else:
-            secret_code += "0"
-    return secret_code
+# Step 17
+# Update the function parameter to be poems, then create a for loop around all the current content of the function that iterates over poems and uses poem as the loop variable.
+
+def pin_extractor(poems):
+    for poem in poems:
+        secret_code = ''
+        lines = poem.split('\n')
+        for line_index, line in enumerate(lines):
+            words = line.split()
+            if len(words) > line_index:
+                secret_code += str(len(words[line_index]))
+            else:
+                secret_code += "0"
+        return secret_code
 poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
 poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow'
 poem3 = 'There\nonce\nwas\na\ndragon'
