@@ -54,13 +54,21 @@
 # Step 8
 # In the last line of the loop, update the print call so that it prints the word inside the words list at index line_index.
 
+# Step 9
+# The len function gives the length of a string. Update the second print call to print the length of that word.
+
+# Step 10
+# The length returned from len is an integer. You need to convert it to a string using the str function to be able to add it to the secret_code string.
+
+# Update the print call to print the length as a string.
+
 def pin_extractor(poem):
     secret_code = ""
     lines = poem.split("\n")
     for line_index, line in enumerate(lines):
         print(line_index,line)
         words = line.split()
-        print(words[line_index])
+        print(str(len(words[line_index])))
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
 # print(pin_extractor(poem))
