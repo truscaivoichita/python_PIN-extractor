@@ -23,9 +23,13 @@
 
 # There is a digit of the PIN hidden in every line, so use the split method inside the function to divide the string into a list of lines. Split the lines on the newline character (\n), and assign the resulting list to a variable called lines.
 
+# Step 5
+# You need to work on each line independently: create a loop over lines that uses line as the loop variable. Inside the loop, print line.
+
 def pin_extractor(poem):
     secret_code = ""
     lines = poem.split("/n")
-    # print(lines)
+    for line in lines:
+        print(lines)
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
