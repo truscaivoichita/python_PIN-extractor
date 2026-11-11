@@ -33,11 +33,29 @@
 
 # Then, add a print call with words as its argument.
 
+# Step 7
+# As you learned in a previous lesson, the enumerate function allows you to keep track of the index while looping over an iterable:
+
+# Example Code
+# fruits = ['apple', 'plum', 'bananas']
+
+# for index, item in enumerate(fruits):
+    # print(index, item)
+
+# 0 apple
+# 1 plum
+# 2 bananas
+# The nth digit of the secret code comes from the nth word of the nth line, so you need to know each line's index.
+
+# Change the loop so that it iterates on enumerate(lines), and add another loop variable before line named line_index.
+
+# Also, update the print call to print(line_index, line).
+
 def pin_extractor(poem):
     secret_code = ""
-    lines = poem.split("/n")
-    for line in lines:
-        print(lines)
+    lines = poem.split("\n")
+    for line_index, line in enumerate(lines):
+        print(line_index,line)
         words = line.split()
         print(words)
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
