@@ -18,7 +18,14 @@
 
 # Then call the function with the poem variable as an argument.
 
+# Step 4
+# Now that you have added a function call you can see any error created inside the function in the terminal, and you can always use print to see the value of things.
+
+# There is a digit of the PIN hidden in every line, so use the split method inside the function to divide the string into a list of lines. Split the lines on the newline character (\n), and assign the resulting list to a variable called lines.
+
 def pin_extractor(poem):
     secret_code = ""
+    lines = poem.split("/n")
+    # print(lines)
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
