@@ -50,6 +50,9 @@
 # Change the loop so that it iterates on enumerate(lines), and add another loop variable before line named line_index.
 
 # Also, update the print call to print(line_index, line).
+#
+# Step 8
+# In the last line of the loop, update the print call so that it prints the word inside the words list at index line_index.
 
 def pin_extractor(poem):
     secret_code = ""
@@ -57,7 +60,7 @@ def pin_extractor(poem):
     for line_index, line in enumerate(lines):
         print(line_index,line)
         words = line.split()
-        print(words)
+        print(words[line_index])
 poem = "Stars and the moon\nshine in the sky\nwhite and bright\nuntil the end of the night"
 pin_extractor(poem)
-print(pin_extractor(poem))
+# print(pin_extractor(poem))
