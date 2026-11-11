@@ -89,7 +89,13 @@
 # Step 17
 # Update the function parameter to be poems, then create a for loop around all the current content of the function that iterates over poems and uses poem as the loop variable.
 
+# Step 18
+# Before the loop, create a new variable secret_codes that has a starting value of an empty list.
+
+# Then replace the return secret_code line with a line that appends secret_code to the secret_codes list.
+
 def pin_extractor(poems):
+    secret_codes = []
     for poem in poems:
         secret_code = ''
         lines = poem.split('\n')
@@ -99,7 +105,7 @@ def pin_extractor(poems):
                 secret_code += str(len(words[line_index]))
             else:
                 secret_code += "0"
-        return secret_code
+        secret_codes.append(secret_code)
 poem = "Stars and the moon\nshine in the sky\nwhite and\nuntil the end of the night"
 poem2 = 'The grass is green\nhere and there\nhoping for rain\nbefore it turns yellow'
 poem3 = 'There\nonce\nwas\na\ndragon'
